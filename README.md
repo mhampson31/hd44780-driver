@@ -1,14 +1,9 @@
 # hd44780-driver
 
-[![crates.io](https://img.shields.io/crates/v/hd44780-driver.svg)](https://crates.io/crates/hd44780-driver)
-[![crates.io](https://img.shields.io/crates/l/hd44780-driver.svg)](https://crates.io/crates/hd44780-driver)
-[![travis-ci.org](https://travis-ci.org/JohnDoneth/hd44780-driver.svg?branch=master)](https://travis-ci.org/JohnDoneth/hd44780-driver)
-[![Rust](https://github.com/JohnDoneth/hd44780-driver/actions/workflows/rust.yml/badge.svg)](https://github.com/JohnDoneth/hd44780-driver/actions/workflows/rust.yml)
-[![API](https://docs.rs/hd44780-driver/badge.svg)](https://docs.rs/hd44780-driver)
 
 Implementation of the `embedded-hal` traits for the HD44780.
 
-![](/header.gif)
+This fork just brings the mpbraendli's work to add [MCP23008 compatibility](https://github.com/mpbraendli/hd44780-driver/) to the current v0.4 of the [original](https://github.com/JohnDoneth/hd44780-driver).
 
 ### Examples
 
@@ -39,10 +34,10 @@ let mut lcd = HD44780::new_4bit(
 );
 
 // Unshift display and set cursor to 0
-lcd.reset(&mut delay); 
+lcd.reset(&mut delay);
 
 // Clear existing characters
-lcd.clear(&mut delay); 
+lcd.clear(&mut delay);
 
 // Display the following string
 lcd.write_str("Hello, world!", &mut delay);
